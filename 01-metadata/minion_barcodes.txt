@@ -1,0 +1,17 @@
+Genus	ID	barcode
+Brochothrix	ID-0243	barcode01
+Serratia	ID-1047	barcode02
+Leuconostoc	ID-0467	barcode03
+Lactococcus	ID-0049	barcode04
+Carnobacterium 	ID-0052	barcode05
+Carnobacterium 	ID-0136	barcode06
+Buttiauxella	ID-0486	barcode07
+Kluyvera	ID-1443	barcode08
+Lactococcus	ID-1626	barcode09
+Latilactobacillus	ID-0184	barcode10
+Serratia	ID-1456	barcode11
+Leuconostoc	ID-1609	barcode12
+Carnobacterium(2)	ID-0052 (2)	barcode13
+Latilactobacillus	ID-0185 (1)	barcode14
+Psychrobacter (Tea)	ID-1601	barcode15
+Pseudomonas (Tea)	ID-0015	barcode16

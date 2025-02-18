@@ -1,0 +1,10 @@
+sampleID	batch
+B1	1
+B2	1
+B3	1
+B4	2
+B5	2
+B6	2
+B7	3
+B8	3
+B9	3

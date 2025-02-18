@@ -1,0 +1,19 @@
+qseqid	isoreplacement	shortIDreplacement	ASV	SpeciesWGS	GenusWGS	Group
+C1_S02_PCA_09.27F	C1_S02_PCA_09.27F	ID-0049	4c3b370a954fd1b56fc1549232f1ebca	Lactococcus sp. ID-0049	Lactococcus	LAB
+C1_S02_PCA_12.27F	C1_S02_PCA_12.27F	ID-0052	4c00a960ac2926363deac2df501f02b3	Carnobacterium divergens	Carnobacterium	LAB
+C1_S02_MRS_03.27F	C1_S02_MRS_03.27F	ID-0136	855f6d2dc84214e67150b2581a82aef4	Carnobacterium maltaromaticum	Carnobacterium	LAB
+C1_S02_MRS_08W.27F	C1_S05_MRS_01.27F	ID-0184	fa8c0f7a5b110d2cc46e0e3f557a933b	Latilactobacillus sakei	Latilactobacillus	LAB
+C1_S02_MRS_02W.27F	C1_S05_MRS_02.27F	ID-0185	6f8aeb4c81f4192073ab02aca87944af	Latilactobacillus curvatus	Latilactobacillus	LAB
+C1_S02_PCA_05.27F	C2_S02_PCA_10.27F	ID-0243	a024e61a9c9af995832ad2f9d7b69be9	Brochothrix thermosphacta	Brochothrix	others
+C1_S03_BR_02	C1_S03_BR_02	ID-0317	5dfaef71c2a06e1d51eaf40e9bd0f406	Yarrowia	Yarrowia	yeast
+C1_S01_BR_03	C1_S01_BR_03	ID-0367	3d4847a1a754b6437afe9c164583ef25	[Candida] zeylanoides	Kurtzmaniella	yeast
+C1_S01_BR_04	C1_S01_BR_04	ID-0368	872b11de03e9ee12bc2b56487c9b9a3b	Debaryomyces hansenii	Debaryomyces	yeast
+C1_S07_MRS_03.27F	C1_S07_MRS_03.27F	ID-0467	ec4c96450c8cc16054c510a78cb83ec7	Leuconostoc mesenteroides	Leuconostoc	LAB
+C1_S07_VRDB_01.27F	C1_S07_VRBD_01.27F	ID-0486	d81a82dd059bc04b30a143d132a2e504	Buttiauxella gaviniae	Buttiauxella	Enterobacteriaceae
+C1_S08_BR_05	C1_S08_BR_05	ID-0991	58ab9f67a59e463e1946b34fb158c418	Debaryomyces hansenii	Debaryomyces	yeast
+C2_S08_BR_03.27F	C2_S08_BR_03.27F	ID-1047	6294929bd61a09b932614f93a4745198	Serratia liquefaciens	Serratia	Enterobacteriaceae
+C1_09_YGC25_03	C1_09_YGC25_03	ID-1109	3dde21927d9af98e5c73512e8afc0c63	[Candida] norvegica	Barnettozyma	yeast
+C3_S08_VRBD_07W.27F	C3_S08_VRBD_07W.27F	ID-1443	59696ea105d2bea1e68a7fbbd86ffec8	Kluyvera intermedia	Kluyvera	Enterobacteriaceae
+C1_S06_VRBD_04W.27F	C1_S06_VRBD_04W.27F	ID-1456	f89e301ca2afccc9b99196267503a931	Serratia proteamaculans	Serratia	Enterobacteriaceae
+C1_S06_MRS_03.27F	C1_S05_MRS_81.27F	ID-1609	92f089a6b2776fe681716106478821bc	Leuconostoc gasicomitatum	Leuconostoc	LAB
+C3_S05_MRS_02.27F	C2_S05_MRS_90.27F	ID-1626	b62390e7aa2e53213fd682689e1473cd	Lactococcus carnosus	Lactococcus	LAB
