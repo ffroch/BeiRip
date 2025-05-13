@@ -1,9 +1,0 @@
-#remove sample from DNAStringSet by name
-#input: DNAStringSet, name of sample to remove
-#output: DNAStringSet with sample removed
-#make new folder named "output" in working directory
-make.dir
-
-#count how many "N" I have in each rowname of my dataframe
-#input: dataframe
-#output: dataframe with new column "N_count" added

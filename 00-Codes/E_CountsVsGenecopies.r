@@ -109,7 +109,14 @@ ggsave("./03-Routputfiles/E_CountsVsGenecopies/E_CountsVsGenecopies.png",
 alldata <- alldata[, 1:6]
 alldatawide <- data.frame(pivot_wider(alldata, names_from = indicator, values_from = cellnumber))
 
+qqnorm(log10(alldatawide$gencopiesbasedonall))
+qqnorm(log10(alldatawide$CFU.on.PCA))
+library(lmtest)
+model <- lm(log10(CFU.on.PCA) ~ log10(gencopiesbasedonall), data = alldatawide)
+bptest(model)
 corr1 <- cor.test(log10(alldatawide$gencopiesbasedonall), log10(alldatawide$CFU.on.PCA))
+corr1
+corr1 <- cor.test(log10(alldatawide$gencopiesbasedonall), log10(alldatawide$CFU.on.PCA), method = "spearman")
 corr1
 x_pos <- min(log10(alldatawide$gencopiesbasedonall), na.rm = TRUE) + 0.995 * (max(log10(alldatawide$gencopiesbasedonall), na.rm = TRUE) - min(log10(alldatawide$gencopiesbasedonall), na.rm = TRUE))
 y_pos <- min(log10(alldatawide$CFU.on.PCA), na.rm = TRUE) + 0.1 * (max(log10(alldatawide$CFU.on.PCA), na.rm = TRUE) - min(log10(alldatawide$CFU.on.PCA), na.rm = TRUE))
@@ -119,8 +126,8 @@ p1 <- ggplot(alldatawide, aes(x = log10(gencopiesbasedonall), y = log10(CFU.on.P
   geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black") +
   scale_color_manual(values = batchcol, name = "batch") +
   theme_bw() +
-  theme(legend.position.inside = c(0,1),
-  legend.justification = c(0,1)) +
+  #theme(legend.position.inside = c(0,1),
+  #legend.justification = c(0,1)) +
   xlab(bquote("log10(genomic equivalents " * italic(Allobacillus) * ")")) +
   ylab("log10(CFU on PCA)")
   
@@ -138,7 +145,14 @@ if (corr1$p.value > 0.001) {
                        x = x_pos, y = y_pos, size = 3, hjust = 1, color = "black")
 }
 
+qqnorm(log10(alldatawide$gencopiesbasedonimt))
+qqnorm(log10(alldatawide$CFU.on.PCA))
+model <- lm(log10(CFU.on.PCA) ~ log10(gencopiesbasedonimt), data = alldatawide)
+bptest(model)
+
 corr2 <- cor.test(log10(alldatawide$gencopiesbasedonimt), log10(alldatawide$CFU.on.PCA))
+corr2
+corr2 <- cor.test(log10(alldatawide$gencopiesbasedonimt), log10(alldatawide$CFU.on.PCA), method = "spearman")
 corr2
 x_pos <- min(log10(alldatawide$gencopiesbasedonimt), na.rm = TRUE) + 0.995 * (max(log10(alldatawide$gencopiesbasedonimt), na.rm = TRUE) - min(log10(alldatawide$gencopiesbasedonimt), na.rm = TRUE))
 y_pos <- min(log10(alldatawide$CFU.on.PCA), na.rm = TRUE) + 0.1 * (max(log10(alldatawide$CFU.on.PCA), na.rm = TRUE) - min(log10(alldatawide$CFU.on.PCA), na.rm = TRUE))
@@ -147,7 +161,7 @@ p2 <- ggplot(alldatawide, aes(x = log10(gencopiesbasedonimt), y = log10(CFU.on.P
   geom_smooth(aes(group = 1), method = "lm", se = TRUE, color = "black") +
   scale_color_manual(values = batchcol, name = "batch") +
   theme_bw() +
-  theme(legend.position = c(0.1,0.8)) +
+  #theme(legend.position = c(0.1,0.8)) +
   xlab(bquote("log10(genomic equivalents " * italic(Imtechella) * ")")) +
   ylab("log10(CFU on PCA)")
 if (corr2$p.value > 0.001) {
@@ -164,7 +178,11 @@ if (corr2$p.value > 0.001) {
                        x = x_pos, y = y_pos, size = 4, hjust = 1, color = "black")
 }
 p2
+qqnorm(log10(alldatawide$totalcopies0mm))
+qqnorm(log10(alldatawide$CFU.on.YGC))
 corr3 <- cor.test(log10(alldatawide$totalcopies0mm), log10(alldatawide$CFU.on.YGC))
+corr3
+corr3 <- cor.test(log10(alldatawide$totalcopies0mm), log10(alldatawide$CFU.on.YGC), method = "spearman")
 corr3
 x_pos <- min(log10(alldatawide$totalcopies0mm), na.rm = TRUE) + 0.995 * (max(log10(alldatawide$totalcopies0mm), na.rm = TRUE) - min(log10(alldatawide$totalcopies0mm), na.rm = TRUE))
 y_pos <- min(log10(alldatawide$CFU.on.YGC), na.rm = TRUE) + 0.1 * (max(log10(alldatawide$CFU.on.YGC), na.rm = TRUE) - min(log10(alldatawide$CFU.on.YGC), na.rm = TRUE))
@@ -193,7 +211,11 @@ if (corr3$p.value > 0.001) {
 # remove alldatawide with B7, B8 and B9 in piece
 alldatawide <- alldatawide[alldatawide$piece != "B7" & alldatawide$piece != "B8" & alldatawide$piece != "B9", ]
 
+qqnorm(log10(alldatawide$totalcopies0mm))
+qqnorm(log10(alldatawide$CFU.on.YGC))
 corr4 <- cor.test(log10(alldatawide$totalcopies0mm), log10(alldatawide$CFU.on.YGC))
+corr4
+corr4 <- cor.test(log10(alldatawide$totalcopies0mm), log10(alldatawide$CFU.on.YGC), method = "spearman")
 corr4
 x_pos <- min(log10(alldatawide$totalcopies0mm), na.rm = TRUE) + 0.995 * (max(log10(alldatawide$totalcopies0mm), na.rm = TRUE) - min(log10(alldatawide$totalcopies0mm), na.rm = TRUE))
 y_pos <- min(log10(alldatawide$CFU.on.YGC), na.rm = TRUE) + 0.1 * (max(log10(alldatawide$CFU.on.YGC), na.rm = TRUE) - min(log10(alldatawide$CFU.on.YGC), na.rm = TRUE))
@@ -245,7 +267,11 @@ alldatasel <- alldatasel[!(alldatasel$selector %in% high_pseudomonas_samples), ]
 alldatasel <- alldatasel[, 1:6]
 alldataselwide <- data.frame(pivot_wider(alldatasel, names_from = indicator, values_from = cellnumber))
 
+qqnorm(log10(alldataselwide$totalcopies0mm))
+qqnorm(log10(alldataselwide$CFU.on.YGC))
 corr5 <- cor.test(log10(alldataselwide$totalcopies0mm), log10(alldataselwide$CFU.on.YGC))
+corr5
+corr5 <- cor.test(log10(alldataselwide$totalcopies0mm), log10(alldataselwide$CFU.on.YGC), method = "spearman")
 corr5
 x_pos <- min(log10(alldataselwide$totalcopies0mm), na.rm = TRUE) + 0.995 * (max(log10(alldataselwide$totalcopies0mm), na.rm = TRUE) - min(log10(alldataselwide$totalcopies0mm), na.rm = TRUE))
 y_pos <- min(log10(alldataselwide$CFU.on.YGC), na.rm = TRUE) + 0.1 * (max(log10(alldataselwide$CFU.on.YGC), na.rm = TRUE) - min(log10(alldataselwide$CFU.on.YGC), na.rm = TRUE))

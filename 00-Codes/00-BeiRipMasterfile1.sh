@@ -157,7 +157,7 @@ conda activate r-env-4.3
 ####################################################################################################
 # Part 8a: Taxonomic classification of the representative sequences 16S
 ####################################################################################################
-# This script performs a taxonomic classification of the representative sequences. It uses the program qiime2 in combination with the greengenes2 2022-10 data base to perform the analysis. The results are saved in the folder 05-qiime/HTS_16S/06-taxonomy.
+# This script performs a taxonomic classification of the representative sequences. It uses the program qiime2 in combination with the SILVA data base v. 138.1 to perform the analysis. The results are saved in the folder 05-qiime/HTS_16S/06-taxonomy.
 # If you don't get updated data from the company or change the filtering parameters it is not necessary to run this script again.
 
 # ./00-Codes/08-16S-BeiRipTaxonomyClassification.sh
